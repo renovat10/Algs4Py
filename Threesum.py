@@ -1,5 +1,5 @@
 import sys #For using CLI arguments. Change to argparse in future versions
-from timer import timer
+from timer import Timer
 
 def printAll(a): #Prints all triplets with sum 0
     N = len(a)
