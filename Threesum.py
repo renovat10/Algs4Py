@@ -1,4 +1,5 @@
 import sys #For using CLI arguments. Change to argparse in future versions
+from timer import timer
 
 def printAll(a): #Prints all triplets with sum 0
     N = len(a)
@@ -20,7 +21,8 @@ def count(a): #Returns count of triplets with sum 0
     return count
 
 def main():
-    zero_threesum_count = count([int(i) for i in sys.argv[1:]]) #Unable to pass files. Improve with argparse
+    with Timer(text="{:.8f}"):
+        zero_threesum_count = count([int(i) for i in sys.argv[1:]]) #Unable to pass files. Improve with argparse
     print("Number of zero-sum triplets\t:\t", zero_threesum_count)
 
 if __name__ == "__main__":
